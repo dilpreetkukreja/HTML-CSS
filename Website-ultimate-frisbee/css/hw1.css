@@ -1,0 +1,121 @@
+body{
+	padding:3px;
+	margin:3px;
+}
+
+
+header{
+	background-image: url("/images/flywheel.jpg");
+	background-repeat: no-repeat; 
+	background-size: cover;
+	background-color:  #999999;
+	padding:9px;
+
+
+}
+
+header nav a{	
+	/*border: 2px solid green;*/
+	margin:20px 60px;
+	padding:10px;
+	border-radius:2px;
+	background-color: rgba(255,255,255,.2);
+	text-decoration: none;
+	display:inline-block;
+	width:8em;
+	height:1em;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 25px;
+    /* Standard syntax */
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    /*transition-delay: 1s;*/
+
+}
+header nav a.active{
+	background-color: #ffffff;
+	cursor:default;
+}
+
+
+header nav{
+	text-align:center;	
+	/*border: 2px solid red;*/
+	
+}
+
+header nav a:hover{
+	color:black;
+	background-color: rgba(255,2,5,.2);
+}
+
+h1{
+	color:#00efff;
+	text-align: center;
+}
+
+h2{
+	color:#000e80;
+	text-transform: uppercase;
+}
+
+section{
+	background-color: #ffffff;
+}
+
+a{
+		color:#000e80;
+}
+main{
+
+	border:2px solid black;
+	overflow: auto;
+	
+
+}
+main aside a img{
+	height:80px;
+	width:100px;
+	border:2px solid black;
+	margin: 25px 25px 25px 25px;
+}
+
+main aside a{
+	display:block;
+}
+
+main aside{
+	background-color: #498000;
+	margin-right: 8px;
+	float:left;
+	text-align: center;
+
+}	
+
+
+main section{
+		
+	
+}
+main section{
+		
+	
+}
+main section p,main section h2{
+	margin:5px;
+	padding:5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

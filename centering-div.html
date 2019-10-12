@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		root:{
+			font-size:62.5%;
+		}
+		*, *::after, *::before{
+
+			box-sizing:border-box;
+
+		}
+		.wrapper{
+			display: flex;
+		}
+		.section{
+			position:relative;
+			width:50%;
+			height:400px;
+			margin:0 auto;
+		
+
+		}
+		.scaling-on-offset{
+			animation-name: scaling;
+			animation-duration: 2s;
+			animation-fill-mode: forwards;
+		}
+		@keyframes scaling{
+			0%{
+				transform: scale(0);
+			}
+			100%{
+				transform: scale(1);
+			}
+
+		}
+		.section:hover .outline{
+			outline: 1px solid black;
+			outline-offset: -2rem;
+
+		}
+		.section:hover .caption{
+			display:flex;
+
+		} 
+		.section:hover img{
+			opacity:0.7;
+		}
+		.caption{
+			position: absolute;
+			top:50%;
+			left:50%;
+			transform: translate(-50%,-50%);
+			height:100px;
+			width:60%;
+			color:#ffffff;
+			background-color: rgba(0,0,0,0.7);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-right: 4rem;
+			display:none;
+			-webkit-transition: display ease-out 250ms;	
+			transition: display ease-out 250ms;		}
+
+		.section img{
+			width:100%;
+			max-width:100%;
+			height:100%;
+			object-fit: cover;
+			display: block;
+			opacity:1;
+			transition: opacity ease-out 250ms;	
+		}
+		.outline{
+			-webkit-transition: outline ease-out 250ms;
+			transition: outline ease-out 250ms;
+		}
+		.moving-outline::before{
+			position:absolute;
+			content:"";
+			top:1.25rem;
+			bottom:1.25rem;
+			left:1.25rem;
+			right:1.25rem;
+			
+		}
+		.moving-outline::before{
+			border-top: 2px solid black;
+			border-bottom: 2px solid black;
+			transform: scale(0,1);
+			transition: transform ease-out 250ms;
+		}
+		.moving-outline:hover::before{
+			transform: scale(1,1);
+		}
+
+		.moving-outline::after{
+			position:absolute;
+			content:"";
+			top:1.25rem;
+			bottom:1.25rem;
+			left:1.25rem;
+			right:1.25rem;
+			
+		}
+		.moving-outline::after{
+			border-left: 2px solid black;
+			border-right: 2px solid black;
+			transform: scale(1,0);
+			transition: transform ease-out 250ms;
+		}
+		.moving-outline:hover::after{
+			transform: scale(1,1);
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<figure class="section">
+			<img class="outline scaling-on-offset" src="https://source.unsplash.com/random/300×300">
+			<figcaption class="caption"><p>I'm centered & figcaption</p></figcaption>
+		</figure>
+		<figure class="section">
+			<img class="outline" src="https://source.unsplash.com/random/300×300">
+			<figcaption class="caption"><p>I'm centered & figcaption</p></figcaption>
+		</figure>
+		<figure class="section moving-outline">
+			<img class="" src="https://source.unsplash.com/random/300×300">
+			<figcaption class="caption"><p>I'm centered & figcaption</p></figcaption>
+		</figure>
+	</div>
+
+</body>
+</html>
